@@ -23,5 +23,14 @@ function handleNoClick() {
 }
 
 function handleYesClick() {
-    window.location.href = "yes_page.html";
+    // Hide the main page content
+    document.getElementById('main-page').style.display = 'none';
+    // Show the yes page content
+    document.getElementById('yes-page').style.display = 'block';
+    const audio = new Audio('data/doodle-made-with-Voicemod.mp3');
+    audio.play().catch(e => console.log("Audio autoplay failed:", e));
+}
+
+function refreshPage() {
+    location.reload();
 }
